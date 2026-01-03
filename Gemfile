@@ -10,5 +10,8 @@ group :jekyll_plugins do
   gem 'base64'
   gem 'bigdecimal'
   gem 'logger'
+  gem 'webrick'
+  gem 'json'
+  gem 'erb'
 end
 
