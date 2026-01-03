@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Style Guide
+title: Style Guide (Example edit by TC)
 description: This is a style guide of the Scriptor Jekyll theme
 ---
 
