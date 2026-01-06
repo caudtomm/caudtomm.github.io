@@ -33,11 +33,11 @@ navigation:
   - text: About
     url: /about.html
   - text: Style Guide
-    url: /style-guide/
+    url: /style-guide.html
   - text: Tags
-    url: /tags/
-  - text: Download
-    url: https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme
+    url: /tags.html
+#  - text: Download
+#    url: https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme
 
 # The shortname for your Disqus site to enable comments.
 disqus: justgoodthemes
