@@ -1,51 +1,96 @@
 ---
 layout: default
+title: Home
 ---
 
 <main class="main-content fadeInDown delay_075s">
 
-  {% for post in paginator.posts %}
-  <article class="post">
-    <header class="post-header">
-      <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{post.date | date: "%B %-d, %Y" }}</time>
-      <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a></h2>
-      <div class="post-meta">
-        By <span class="post-author">{{ site.data.author.name }}</span>{% if post.tags.size > 0 %}<span
-          class="post-tags"> in
-          {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
-      </div><!-- .post-meta -->
-      {% if post.feature_image and post.feature_image != "" %}
-      <figure class="post-thumbnail image-card width-wide">
-        <a href="{{site.baseurl}}{{post.url}}"><img src="{{ post.feature_image | relative_url }}"
-            alt="{{ post.title }}"></a>
-      </figure><!-- .post-thumbnail -->
-      {% endif %}
-    </header><!-- .post-header -->
-    <div class="post-content">
-      {% if post.content contains '<!--more-->' %}
-      {{ post.content | split:'<!--more-->' | first }}
-      <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">Continue reading &rarr;</a>
-      </p>
-      {% else %}
-      {{ post.content }}
-      {% endif %}
-    </div><!-- .post-content -->
-  </article><!-- .post -->
-  {% endfor %}
+  <section class="home-hero">
 
-  {% if paginator.total_pages > 1 %}
-  <nav class="pagination">
-    <h2 class="screen-reader-text">Posts navigation</h2>
-    <div class="nav-links">
-      {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="newer-posts">&larr; Newer Posts</a>
-      {% endif %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="older-posts">Older Posts &rarr;</a>
-      {% endif %}
+    <div class="home-photo">
+      <!-- [PLACEHOLDER: replace src with your photo, e.g. images/photo.jpg] -->
+      <img src="images/author.png" alt="Tommaso Caudullo" style="max-width:220px; border-radius:50%;">
     </div>
-  </nav><!-- .pagination -->
-  {% endif %}
 
-</main><!-- .site-main -->
+    <div class="home-intro">
+      <h1>Tommaso Caudullo</h1>
+      <p class="home-affiliation">PhD Candidate · Systems Neuroscience · University of Basel</p>
+
+      <p class="home-pitch">
+        How does a neural circuit learn to make sense of the world? My research tackles this question
+        in the olfactory system, where the mapping from stimulus to percept is anything but fixed.
+        Using zebrafish as a genetically tractable vertebrate model, I combine whole-brain imaging,
+        electrophysiology, and behavioral assays to understand how piriform-homolog circuits reorganize
+        their representations through experience — and what this tells us about cortical computation
+        more broadly.
+      </p>
+
+      <div class="home-badges">
+        <!-- Google Scholar -->
+        <a href="[PLACEHOLDER: Google Scholar URL]" title="Google Scholar" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="Google Scholar">
+        </a>
+        <!-- GitHub -->
+        <a href="[PLACEHOLDER: GitHub profile URL, e.g. https://github.com/caudtomm]" title="GitHub" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub">
+        </a>
+        <!-- Institutional email -->
+        <a href="mailto:[PLACEHOLDER: institutional email]" title="Email">
+          <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email">
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/tommaso-caudullo-526076317/ title="LinkedIn" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
+        <!-- Bluesky -->
+        <!-- <a href="[PLACEHOLDER: Bluesky URL]" title="Bluesky" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/Bluesky-0085ff?style=flat&logo=bluesky&logoColor=white" alt="Bluesky">
+        </a> -->
+        <!-- X / Twitter -->
+        <!-- <a href="[PLACEHOLDER: X/Twitter URL]" title="X" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X">
+        </a> -->
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<style>
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+.home-photo {
+  flex: 0 0 auto;
+}
+.home-intro {
+  flex: 1 1 300px;
+}
+.home-intro h1 {
+  margin-top: 0;
+}
+.home-affiliation {
+  color: #666;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.home-pitch {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.home-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.home-badges a {
+  text-decoration: none;
+}
+</style>
