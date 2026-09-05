@@ -34,12 +34,10 @@ navigation:
     url: /cv.html
   - text: About
     url: /about.html
-#  - text: Style Guide
-#    url: /style-guide.html
-#  - text: Tags
-#    url: /tags.html
-#  - text: Download
-#    url: https://github.com/JustGoodThemes/Scriptor-Jekyll-Theme
+  - text: Style Guide
+    url: /style-guide.html
+  - text: Tags
+    url: /tags.html
 
 # The shortname for your Disqus site to enable comments.
 disqus: justgoodthemes
@@ -49,7 +47,7 @@ accent_color: '#2d72d9'
 
 # Site footer
 footer:
-  content: "&copy; Scriptor all rights reserved. Theme by [JustGoodThemes](https://www.justgoodthemes.com)."
+  #content: "&copy; Scriptor all rights reserved. Theme by [JustGoodThemes](https://www.justgoodthemes.com)."
   has_social: true
 
 # Plugins
