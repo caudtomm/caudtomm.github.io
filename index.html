@@ -31,7 +31,7 @@ title: Home
     <h2 class="home-news-title">News</h2>
     <ul class="home-news-list">
       {% for item in site.data.news %}
-      <li><span class="home-news-date">{{ item.date }}</span> — {{ item.text }}</li>
+      <li><span class="home-news-date">{{ item.date }}</span> — {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</li>
       {% endfor %}
     </ul>
   </section>
