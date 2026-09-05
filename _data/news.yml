@@ -1,0 +1,14 @@
+# News items shown on the Home page, most recent first.
+# Add a new entry at the TOP of this list — no HTML editing needed.
+#
+# - date: "Mon YYYY"
+#   text: "What happened."
+
+- date: "Sep 2026"
+  text: "Looking for postdoc positions in systems/computational neuroscience. Get in touch if you're hiring!"
+
+- date: "Sep 2026"
+  text: "Check out our new [preprint](https://www.biorxiv.org/content/10.1101/2026.09.01.123456v1) on bioRxiv!"
+
+- date: "Jul 2026"
+  text: "Graduated with a **summa cum laude** PhD in Neurobiology from the FMI-Basel / University of Basel!"
